@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jersey 10", sans-serif;
+}
+
+
+
+/* INICIO ESTILOS BOTON CUSTOM */
+
+button {
+    --glow-color: rgb(114, 177, 142);
+    --glow-spread-color: rgba(138, 168, 151, 0.781);
+    --enhanced-glow-color: rgb(107, 160, 128);
+    --btn-color: rgb(116, 175, 135);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    font-family: "Jersey 10", sans-serif;
+}
+
+button::after {
+    pointer-events: none;
+    content: "¡VAMOS!";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 50%;
+    width: 50%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+
+}
+
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+
+}
+
+button:active {
+    box-shadow: 0 0 0.6em .16em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .16em var(--glow-color);
+
+}
+
+/* INICIO STYLES CARD */
+.card {
+    max-width: auto;
+    max-height: auto;
+    background-image: linear-gradient(163deg, #11291b 0%, #599c77 100%);
+    border-radius: 20px;
+    transition: all .3s;
+}
+
+
+
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+body {
+    width: auto;
+    height: auto;
+    --color: rgba(0, 115, 19, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(180deg,
+            transparent 24%,
+            var(--color) 25%,
+            var(--color) 26%,
+            transparent 27%,
+            transparent 74%,
+            var(--color) 75%,
+            var(--color) 76%,
+            transparent 77%,
+            transparent),
+        linear-gradient(45deg,
+            transparent 24%,
+            var(--color) 35%,
+            var(--color) 26%,
+            transparent 17%,
+            transparent 74%,
+            var(--color) 75%,
+            var(--color) 76%,
+            transparent 77%,
+            transparent);
+    background-size: 55px 55px;
+}
